@@ -3,12 +3,12 @@
 ## اسکنر آی پی وارپ و نصب کننده ی wire-g (کانفیگ رایگان وایرگارد) + کلونر
 install
 ```
-bash <(curl -fsSL https://raw.githubusercontent.com/soroushse7o/warp-endpoint-scanner/main/endip/install.sh)
+bash <(curl -fsSL (https://raw.githubusercontent.com/soroushse7o/warp-endpoint-scanner/refs/heads/main/endip/install.sh)
 ```
 دستور ish -ios shell 
 
 ```
-curl -fsSL https://raw.githubusercontent.com/soroushse7o/warp-endpoint-scanner/main/endip/install.sh -o install.sh && chmod +x install.sh && bash install.sh
+curl -sSL https://raw.githubusercontent.com/soroushse7o/warp-endpoint-scanner/refs/heads/main/endip/install.sh -o install.sh && chmod +x install.sh && bash install.sh
 ```
 ⚠ این دستور به curl/bash نیاز دارد که در iSH تازه‌نصب نیستند؛ گزینه «پیش‌نیازها» را بزنید یا اجرا کنید: apk add curl bash
 
