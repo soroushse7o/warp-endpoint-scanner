@@ -3,7 +3,11 @@
 ## اسکنر آی پی وارپ و نصب کننده ی wire-g (کانفیگ رایگان وایرگارد) + کلونر
 install
 ```
-bash <(curl -fsSL https://raw.githubusercontent.com/Ptechgithub/warp/main/endip/install.sh)
+bash <(curl -fsSL https://raw.githubusercontent.com/soroushse7o/warp-endpoint-scanner/refs/heads/main/endip/install.sh)
+```
+دستور اجرا روی ایفون ish 
+```
+curl -sSL https://raw.githubusercontent.com/soroushse7o/warp-endpoint-scanner/refs/heads/main/endip/install.sh -o install.sh && chmod +x install.sh && bash install.sh
 ```
 ![16](https://raw.githubusercontent.com/Ptechgithub/configs/main/media/16.jpg)
 
@@ -30,16 +34,12 @@ bash <(curl -fsSL https://raw.githubusercontent.com/Ptechgithub/warp/main/endip/
 ### اگر لایسنس گرفتید و برای تبدیل به warp-plus پس دریافت کانفیگ دستور زیر را وارد کنید:
 ### `WGCF_LICENSE_KEY="Your License" wgcf update`
 ### لایسنس خودتون رو به جای `Your License` قرار بدید و اجرا کنید.
----
-### برای دریافت لایسنس رایگان از طریق ربات تلگرام روی لینک زیر کلیک کنید.
-[دریافت License Key رایگان](https://t.me/generatewarpplusbot)
 
----
 ### [4] با انتخاب گزینه ی 4 یک کانفیگ وایرگارد تولید شده که همراه با مقدار Reserved  است. و جهت استفاده در V2rayNG میباشد.
 ### این گزینه برای شما wire-g را نصب میکند برای نمایش کامل راهنما کافیه عبارت `warp-g -h` را وارد کنید و برای گرفتن کانفیگ وایرگارد فقط `warp-g` را وارد کرده و اینتر بزنید.(این گزینه مجدد نیاز به نصب و اجرای مجدد توسط اسکریپت نمی باشد). 
 ### بعد از دریافت کانفیگ رایگان و اضافه کردن آن در V2rayNG به جای `engage.cloudflareclient.com` باید IP اسکن شده بزارید چون این ادرس فیلتر شده است.
 ---
-### جهت دانلود اسکنر ویندوز کلیک کنید.[Win_warp_ip.zip](https://raw.githubusercontent.com/Ptechgithub/warp/main/endip/win_warp_ip.zip)
+### جهت دانلود اسکنر ویندوز کلیک کنید.[Win_warp_ip.zip](https://raw.githubusercontent.com/soroushse7o/warp-endpoint-scanner/main/endip/win_warp_ip.zip)
 ---
 ### اسکریپت نصب وارپ سرور به لینک [WarpServer](https://github.com/Ptechgithub/WarpServer) منتقل شد. 
 ---
