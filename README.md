@@ -1,7 +1,7 @@
 ## Warp Endpoint Scanner + Wire-g Installer
 
 ## اسکنر آی پی وارپ و نصب کننده ی wire-g (کانفیگ رایگان وایرگارد) + کلونر
-install
+دستور اجرا لینوکس و termux اندروید
 ```
 bash <(curl -fsSL https://raw.githubusercontent.com/soroushse7o/warp-endpoint-scanner/refs/heads/main/endip/install.sh)
 ```
