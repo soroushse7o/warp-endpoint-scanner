@@ -3,15 +3,8 @@
 ## اسکنر آی پی وارپ و نصب کننده ی wire-g (کانفیگ رایگان وایرگارد) + کلونر
 install
 ```
-bash <(curl -fsSL (https://raw.githubusercontent.com/soroushse7o/warp-endpoint-scanner/refs/heads/main/endip/install.sh)
+bash <(curl -fsSL https://raw.githubusercontent.com/Ptechgithub/warp/main/endip/install.sh)
 ```
-دستور ish -ios shell 
-
-```
-curl -sSL https://raw.githubusercontent.com/soroushse7o/warp-endpoint-scanner/refs/heads/main/endip/install.sh -o install.sh && chmod +x install.sh && bash install.sh
-```
-⚠ این دستور به curl/bash نیاز دارد که در iSH تازه‌نصب نیستند؛ گزینه «پیش‌نیازها» را بزنید یا اجرا کنید: apk add curl bash
-
 ![16](https://raw.githubusercontent.com/Ptechgithub/configs/main/media/16.jpg)
 
 ### کانال دریافت کانفیگ وایرگارد [WireVpnGuard](https://t.me/WireVpnGuard)
@@ -22,7 +15,7 @@ curl -sSL https://raw.githubusercontent.com/soroushse7o/warp-endpoint-scanner/re
 #Endpoint IP scanner and free Config generator
 
 ### ابتدا با انتخاب 1 یا 2 یک ای پی سالم پیدا کنید.
-### پس از انتخاب 1 (IPv4) یا 2 (IPv6) دو مقدار پرسیده می‌شود: `Endpoints required` (تعداد Endpoint سالم موردنیاز) و `IPs to test` (حداکثر تعداد IP برای تست). اسکن به‌صورت دسته‌ای انجام می‌شود و به‌محض رسیدن به تعداد موردنیاز متوقف می‌شود؛ اگر پس از تست همه IPها تعداد کافی پیدا نشد، فقط نتایج واقعی نمایش داده می‌شود. (برای IPv4 حداکثر 1792 IP یکتا در دسترس است.)
+### پس از انتخاب 1 (IPv4) یا 2 (IPv6) دو مقدار پرسیده می‌شود: `Endpoints required` (تعداد Endpoint سالم موردنیاز) و `IPs to test` (حداکثر تعداد IP برای تست). اسکن به‌صورت دسته‌ای انجام می‌شود و به‌محض رسیدن به تعداد موردنیاز متوقف می‌شود؛ اگر پس از تست همه IPها تعداد کافی پیدا نشد، فقط نتایج واقعی نمایش داده می‌شود. (برای IPv4 حداکثر 3584 IP یکتا در دسترس است.)
 ---
 ### با انتخاب 3 یک کانفیگ رایگان تولید میشود و به طور خودکار IP سالم  پیدا شده در کانفیگ اضافه میشود.
 ### این کانفیگ برای `V2rayNG` و `Nekobox` و برنامه `WireGuard` قابل استفاده است.
@@ -37,6 +30,10 @@ curl -sSL https://raw.githubusercontent.com/soroushse7o/warp-endpoint-scanner/re
 ### اگر لایسنس گرفتید و برای تبدیل به warp-plus پس دریافت کانفیگ دستور زیر را وارد کنید:
 ### `WGCF_LICENSE_KEY="Your License" wgcf update`
 ### لایسنس خودتون رو به جای `Your License` قرار بدید و اجرا کنید.
+---
+### برای دریافت لایسنس رایگان از طریق ربات تلگرام روی لینک زیر کلیک کنید.
+[دریافت License Key رایگان](https://t.me/generatewarpplusbot)
+
 ---
 ### [4] با انتخاب گزینه ی 4 یک کانفیگ وایرگارد تولید شده که همراه با مقدار Reserved  است. و جهت استفاده در V2rayNG میباشد.
 ### این گزینه برای شما wire-g را نصب میکند برای نمایش کامل راهنما کافیه عبارت `warp-g -h` را وارد کنید و برای گرفتن کانفیگ وایرگارد فقط `warp-g` را وارد کرده و اینتر بزنید.(این گزینه مجدد نیاز به نصب و اجرای مجدد توسط اسکریپت نمی باشد). 

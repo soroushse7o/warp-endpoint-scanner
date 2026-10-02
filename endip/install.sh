@@ -39,6 +39,14 @@ cfwarpIP() {
 	fi
 }
 
+# IPv4 /24 ranges used for scanning (each range = 256 IPs)
+ipv4_prefixes=(
+	162.159.192 162.159.193 162.159.195
+	188.114.96 188.114.97 188.114.98 188.114.99
+	8.34.146 8.39.214 8.39.204 8.6.112 8.35.211 8.39.125 8.47.69
+)
+ipv4_max=$((${#ipv4_prefixes[@]} * 256))
+
 # Ask for a positive whole number. Usage: read_positive_int "prompt" variable_name
 read_positive_int() {
 	local value
@@ -54,15 +62,20 @@ read_positive_int() {
 }
 
 # Ask how many healthy endpoints are needed and how many IPs may be tested
+# Usage: scan_params v4|v6
 scan_params() {
+	local hint=""
+	if [ "$1" = "v4" ]; then
+		hint=" (max $ipv4_max)"
+	fi
 	echo -e "${cyan}How many healthy endpoints do you need, and how many IPs should be tested?${rest}"
 	read_positive_int "${yellow}Endpoints required: ${rest}" endpoints_needed
-	read_positive_int "${yellow}IPs to test: ${rest}" iplist
+	read_positive_int "${yellow}IPs to test${hint}: ${rest}" iplist
 }
 
 endipv4() {
-	local prefixes=(162.159.192 162.159.193 162.159.195 188.114.96 188.114.97 188.114.98 188.114.99)
-	local max=$((${#prefixes[@]} * 256))
+	local prefixes=("${ipv4_prefixes[@]}")
+	local max=$ipv4_max
 	local -A seen=()
 	local n=0 tries=0 ip
 	temp=()
@@ -506,7 +519,7 @@ case "$choice" in
 1)
 	echo -e "${purple}*********************${rest}"
 	cfwarpIP
-	scan_params
+	scan_params v4
 	endipv4
 	endipresult
 	Endip_v4
@@ -514,7 +527,7 @@ case "$choice" in
 2)
 	echo -e "${purple}*********************${rest}"
 	cfwarpIP
-	scan_params
+	scan_params v6
 	endipv6
 	endipresult
 	Endip_v6
